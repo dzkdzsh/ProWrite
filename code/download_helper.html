@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>论文下载助手 - Sci-Hub</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .instructions {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .instructions h3 {
+            color: #3498db;
+            margin-top: 0;
+        }
+        .instructions ol {
+            padding-left: 20px;
+        }
+        .instructions li {
+            margin: 10px 0;
+        }
+        .paper-list {
+            list-style: none;
+            padding: 0;
+        }
+        .paper-item {
+            background: #fff;
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .paper-item.downloaded {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+        }
+        .paper-item.pending {
+            border-left: 4px solid #ffc107;
+        }
+        .paper-info {
+            flex: 1;
+        }
+        .paper-ref {
+            font-weight: bold;
+            color: #6c757d;
+        }
+        .paper-title {
+            font-size: 14px;
+            color: #333;
+            margin: 5px 0;
+        }
+        .paper-doi {
+            font-size: 12px;
+            color: #999;
+        }
+        .download-btn {
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        .download-btn:hover {
+            background: #2980b9;
+        }
+        .status {
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        .status.downloaded {
+            background: #28a745;
+            color: white;
+        }
+        .status.pending {
+            background: #ffc107;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>📚 论文下载助手</h1>
+    
+    <div class="instructions">
+        <h3>使用说明：</h3>
+        <ol>
+            <li>点击每篇论文的"打开Sci-Hub链接"按钮</li>
+            <li>你的Edge浏览器已登录Sci-Hub，会自动打开论文PDF</li>
+            <li>在PDF页面上<strong>右键</strong>，选择"另存为"</li>
+            <li>保存到文件夹：<code>D:\course\proWrite\papers\</code></li>
+            <li>使用对应的文件名保存（见下方提示）</li>
+        </ol>
+    </div>
+
+    <ul class="paper-list">
+        <!-- 已下载 -->
+        <li class="paper-item downloaded">
+            <div class="paper-info">
+                <span class="paper-ref">✓ ref1</span>
+                <div class="paper-title">Topological insulators in Bi2Se3, Bi2Te3 and Sb2Te3 with a single Dirac cone on the surface</div>
+                <div class="paper-doi">DOI: 10.1038/nphys1270</div>
+            </div>
+            <span class="status downloaded">已下载</span>
+        </li>
+
+        <li class="paper-item downloaded">
+            <div class="paper-info">
+                <span class="paper-ref">✓ ref2</span>
+                <div class="paper-title">Thin-film thermoelectric devices with high room-temperature figures of merit</div>
+                <div class="paper-doi">DOI: 10.1038/413597a</div>
+            </div>
+            <span class="status downloaded">已下载</span>
+        </li>
+
+        <!-- 待下载 -->
+        <li class="paper-item pending">
+            <div class="paper-info">
+                <span class="paper-ref">ref3</span>
+                <div class="paper-title">Room-temperature MBE deposition, thermoelectric properties, and advanced structural characterization of binary Bi2Te3 and Sb2Te3 thin films</div>
+                <div class="paper-doi">DOI: 10.1016/j.jallcom.2012.01.108</div>
+                <div class="paper-doi">💾 文件名: <code>Room-temperature MBE deposition Bi2Te3 Sb2Te3 thin films.pdf</code></div>
+            </div>
+            <a href="https://sci-hub.jp/10.1016/j.jallcom.2012.01.108" target="_blank" class="download-btn">打开Sci-Hub链接</a>
+        </li>
+
+        <li class="paper-item pending">
+            <div class="paper-info">
+                <span class="paper-ref">ref4</span>
+                <div class="paper-title">Moiré-pattern-modulated electronic structures in Sb2Te3/graphene heterostructure</div>
+                <div class="paper-doi">DOI: 10.1007/s12274-021-3613-7</div>
+                <div class="paper-doi">💾 文件名: <code>Moire-pattern Sb2Te3-graphene heterostructure.pdf</code></div>
+            </div>
+            <a href="https://sci-hub.jp/10.1007/s12274-021-3613-7" target="_blank" class="download-btn">打开Sci-Hub链接</a>
+        </li>
+
+        <li class="paper-item pending">
+            <div class="paper-info">
+                <span class="paper-ref">ref5</span>
+                <div class="paper-title">Self-powered Sb2Te3/MoS2 heterojunction broadband photodetector on flexible substrate from visible to near infrared</div>
+                <div class="paper-doi">DOI: 10.3390/nano13131973</div>
+                <div class="paper-doi">💾 文件名: <code>Self-powered Sb2Te3-MoS2 heterojunction photodetector.pdf</code></div>
+            </div>
+            <a href="https://sci-hub.jp/10.3390/nano13131973" target="_blank" class="download-btn">打开Sci-Hub链接</a>
+        </li>
+
+        <li class="paper-item pending">
+            <div class="paper-info">
+                <span class="paper-ref">ref6</span>
+                <div class="paper-title">Weak interlayer interactions and nearly temperature independent electrical transport in p-type 1T'-MoTe2/Sb2Te3 superlattice-like films</div>
+                <div class="paper-doi">DOI: 10.1016/j.jssc.2024.124785</div>
+                <div class="paper-doi">💾 文件名: <code>Weak interlayer interactions 1T-MoTe2-Sb2Te3.pdf</code></div>
+            </div>
+            <a href="https://sci-hub.jp/10.1016/j.jssc.2024.124785" target="_blank" class="download-btn">打开Sci-Hub链接</a>
+        </li>
+
+        <li class="paper-item pending">
+            <div class="paper-info">
+                <span class="paper-ref">ref7</span>
+                <div class="paper-title">Theoretical insights into Sb2Te3/Te van der Waals heterostructures for achieving very high figure of merit and conversion efficiency</div>
+                <div class="paper-doi">DOI: 10.1016/j.ijheatmasstransfer.2024.126479</div>
+                <div class="paper-doi">💾 文件名: <code>Theoretical insights Sb2Te3-Te van der Waals.pdf</code></div>
+            </div>
+            <a href="https://sci-hub.jp/10.1016/j.ijheatmasstransfer.2024.126479" target="_blank" class="download-btn">打开Sci-Hub链接</a>
+        </li>
+
+        <li class="paper-item pending">
+            <div class="paper-info">
+                <span class="paper-ref">ref8</span>
+                <div class="paper-title">Anomalous thermoelectric nature in disordered AgSbTe2-Sb2Te3 hetero-phase alloys for room temperature applications</div>
+                <div class="paper-doi">DOI: 10.1016/j.jallcom.2024.177313</div>
+                <div class="paper-doi">💾 文件名: <code>Anomalous thermoelectric AgSbTe2-Sb2Te3.pdf</code></div>
+            </div>
+            <a href="https://sci-hub.jp/10.1016/j.jallcom.2024.177313" target="_blank" class="download-btn">打开Sci-Hub链接</a>
+        </li>
+
+        <li class="paper-item pending">
+            <div class="paper-info">
+                <span class="paper-ref">ref9</span>
+                <div class="paper-title">Improved thermoelectric performances of nanocrystalline Sb2Te3/Cr bilayers by reducing thermal conductivity in the grain boundaries and heterostructure interface</div>
+                <div class="paper-doi">DOI: 10.1016/j.vacuum.2018.12.017</div>
+                <div class="paper-doi">💾 文件名: <code>Improved thermoelectric Sb2Te3-Cr bilayers.pdf</code></div>
+            </div>
+            <a href="https://sci-hub.jp/10.1016/j.vacuum.2018.12.017" target="_blank" class="download-btn">打开Sci-Hub链接</a>
+        </li>
+
+        <li class="paper-item pending">
+            <div class="paper-info">
+                <span class="paper-ref">ref10</span>
+                <div class="paper-title">Structural, electronic and optical properties of GeTe/Sb2Te3 superlattices: a first-principles study</div>
+                <div class="paper-doi">DOI: 10.1016/j.spmi.2018.05.035</div>
+                <div class="paper-doi">💾 文件名: <code>Structural electronic optical GeTe-Sb2Te3 superlattices.pdf</code></div>
+            </div>
+            <a href="https://sci-hub.jp/10.1016/j.spmi.2018.05.035" target="_blank" class="download-btn">打开Sci-Hub链接</a>
+        </li>
+
+        <li class="paper-item pending">
+            <div class="paper-info">
+                <span class="paper-ref">ref11</span>
+                <div class="paper-title">Tailoring tricolor structure of magnetic topological insulator for robust axion insulator</div>
+                <div class="paper-doi">DOI: 10.1126/sciadv.aao1669</div>
+                <div class="paper-doi">💾 文件名: <code>Tailoring tricolor magnetic topological insulator axion.pdf</code></div>
+            </div>
+            <a href="https://sci-hub.jp/10.1126/sciadv.aao1669" target="_blank" class="download-btn">打开Sci-Hub链接</a>
+        </li>
+    </ul>
+
+    <div style="text-align: center; margin-top: 40px; padding: 20px; background: #fff; border-radius: 8px;">
+        <p><strong>保存路径：</strong><code>D:\course\proWrite\papers\</code></p>
+        <p>下载完成后，请通知AI助手进行验证</p>
+    </div>
+</body>
+</html>
